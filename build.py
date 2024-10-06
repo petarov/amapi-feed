@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import html
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 import xml.etree.ElementTree as ET
 
 url = 'https://developers.google.com/android/management/release-notes'
@@ -43,7 +43,7 @@ def parse_date(title):
         return last_parsed_date.strftime("%Y-%m-%dT%H:%M:%SZ")
     else:
         # if nothing could be parsed, return the current date and time
-        current_date = datetime.utcnow()
+        current_date = datetime.now(timezone.utc)
         return current_date.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 expandable_sections = soup.find_all('section', class_='expandable')
@@ -56,7 +56,7 @@ title.text = "Google Android Management API Release Notes"
 link = ET.SubElement(feed, "link", href=url)
 
 updated = ET.SubElement(feed, "updated")
-updated.text = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+updated.text = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 author = ET.SubElement(feed, "author")
 author_name = ET.SubElement(author, "name")
