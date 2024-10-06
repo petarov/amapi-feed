@@ -43,6 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          name: amapi-rel-notes
           path: amapi-rel-notes.atom
       - name: Deploy to GitHub Pages
         id: deployment
