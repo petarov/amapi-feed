@@ -73,8 +73,9 @@ def create_atom(sections):
         subtitle_paragraph = section.find('p').get_text().strip() if section.find('p') else ""
 
         notes_list = section.find('ul')
+        #html.escape
         release_notes_html = [
-            html.escape(re.sub(r'\s+', ' ', li.decode_contents().strip().replace('\n', ' '))) for li in notes_list.find_all('li')
+            (re.sub(r'\s+', ' ', li.decode_contents().strip().replace('\n', ' '))) for li in notes_list.find_all('li')
         ] if notes_list else []
 
         entry = ET.SubElement(feed, "entry")
@@ -136,8 +137,9 @@ def create_rss(sections):
         subtitle_paragraph = section.find('p').get_text().strip() if section.find('p') else ""
 
         notes_list = section.find('ul')
+        #html.escape
         release_notes_html = [
-            html.escape(re.sub(r'\s+', ' ', li.decode_contents().strip().replace('\n', ' '))) for li in notes_list.find_all('li')
+            (re.sub(r'\s+', ' ', li.decode_contents().strip().replace('\n', ' '))) for li in notes_list.find_all('li')
         ] if notes_list else []
 
         section_id = section.get('id', f"release-{index + 1}")
