@@ -8,4 +8,4 @@ Google Android Management API [release notes](https://developers.google.com/andr
 
 # License 
 
-[MIT](LICENSE)
+[MIT License](LICENSE)
