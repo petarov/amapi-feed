@@ -1,7 +1,9 @@
 Android Management API Atom Feed
 =====================================
 
-Google Android Management API [release notes](https://developers.google.com/android/management/release-notes) feed. Get notified about new releases right away.
+Google Android Management API [release notes](https://developers.google.com/android/management/release-notes) feed. 
+
+Follow the feed to get notified about changes and new releases.
 
 Feed | Type
 -----|-------
