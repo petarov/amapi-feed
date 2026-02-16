@@ -1,4 +1,6 @@
-Android Management API Atom Feed
+[![Deployed to Pages](https://github.com/petarov/amapi-feed/actions/workflows/static.yml/badge.svg)](https://github.com/petarov/amapi-feed/actions/workflows/static.yml)
+
+Android Management API Atom Feed 
 =====================================
 
 Google Android Management API [release notes](https://developers.google.com/android/management/release-notes) feed. 
