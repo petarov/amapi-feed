@@ -39,8 +39,13 @@ def parse_date(title):
         last_parsed_date = subtract_one_month(last_parsed_date)
         return last_parsed_date.strftime("%Y-%m-%dT%H:%M:%SZ")
     else:
-        # if nothing could be parsed, return the current date and time
-        current_date = datetime.now(timezone.utc)
+        # if nothing could be parsed, return the first day of the month
+        # this fixes a problem where new items without post date linger
+        # for too long at the top of the list, and have their pubDate 
+        # constantly generated anew
+        current_date = datetime.now(timezone.utc).replace(
+            day=1, hour=0, minute=0, second=0, microsecond=0
+        )
         return current_date.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 def create_atom(sections):
