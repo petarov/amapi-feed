@@ -1,5 +1,5 @@
-Android Management API Atom Feed
-=====================================
+Android Management API Updates Feed
+===================================
 
 Google Android Management API [release notes](https://developers.google.com/android/management/release-notes) feed. 
 
@@ -9,6 +9,12 @@ Feed | Type
 -----|-------
 [amapi-rel-notes.rss](https://petarov.github.io/amapi-feed/amapi-rel-notes.rss) | RSS
 [amapi-rel-notes.atom](https://petarov.github.io/amapi-feed/amapi-rel-notes.atom) | Atom
+
+# Usage
+
+Run locally using [uv](https://github.com/astral-sh/uv):
+
+    uv run build.py rss > amapi-rel-notes.rss
 
 # License 
 
