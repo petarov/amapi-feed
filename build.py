@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-import requests
 import argparse
-from bs4 import BeautifulSoup
-import html
 import re
-from datetime import datetime, timezone
 import xml.etree.ElementTree as ET
+from datetime import datetime, timezone
+
+import requests
+from bs4 import BeautifulSoup
 
 feed_title = "Google Android Management API Release Notes"
 url = 'https://developers.google.com/android/management/release-notes'
@@ -81,7 +81,7 @@ def create_atom(sections):
         entry = ET.SubElement(feed, "entry")
 
         section_id = section.get('id', f"release-{index + 1}")
-        
+
         entry_id = ET.SubElement(entry, "id")
         entry_id.text = f"{base_url}/{section_id}"
 
@@ -100,7 +100,7 @@ def create_atom(sections):
         entry_content.text = "<ul>" + "".join([f"<li>{note}</li>" for note in release_notes_html]) + "</ul>"
 
     atom_feed = ET.tostring(feed, encoding="utf-8", method="xml").decode("utf-8")
-    
+
     return atom_feed
 
 def create_rss(sections):
