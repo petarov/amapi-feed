@@ -1,9 +1,13 @@
+[![Deployed to Pages](https://github.com/petarov/amapi-feed/actions/workflows/static.yml/badge.svg)](https://github.com/petarov/amapi-feed/actions/workflows/static.yml)
+
 Android Management API Updates Feed
 ===================================
 
 Google Android Management API [release notes](https://developers.google.com/android/management/release-notes) feed. 
 
 Follow the feed to get notified about changes and new releases.
+
+Auto-updated at `06:00 (UTC)` every `Monday`, `Wednesday`, and `Friday`.
 
 Feed | Type
 -----|-------
