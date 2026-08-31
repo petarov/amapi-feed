@@ -7,6 +7,8 @@ Google Android Management API [release notes](https://developers.google.com/andr
 
 Follow the feed to get notified about changes and new releases.
 
+Auto-updated at `06:00 (UTC)` every `Monday`, `Wednesday`, and `Friday`.
+
 Feed | Type
 -----|-------
 [amapi-rel-notes.rss](https://petarov.github.io/amapi-feed/amapi-rel-notes.rss) | RSS
