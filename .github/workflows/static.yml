@@ -32,8 +32,10 @@ jobs:
         uses: astral-sh/setup-uv@v6
       - name: Build feeds
         run: |
-          uv run build.py atom > amapi-rel-notes.atom
-          uv run build.py rss > amapi-rel-notes.rss
+          uv run build.py amapi atom > amapi-rel-notes.atom
+          uv run build.py amapi rss > amapi-rel-notes.rss
+          uv run build.py sdk atom > amapi-sdk.atom
+          uv run build.py sdk rss > amapi-sdk.rss
       - name: Setup Pages
         uses: actions/configure-pages@v6
       - name: Upload artifact
